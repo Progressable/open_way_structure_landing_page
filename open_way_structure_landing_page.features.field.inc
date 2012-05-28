@@ -45,14 +45,14 @@ function open_way_structure_landing_page_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => '',
+            'image_style' => 'ow_smaller-square-landing-page',
           ),
           'type' => 'image',
-          'weight' => 1,
+          'weight' => '1',
         ),
       ),
       'entity_type' => 'field_collection_item',
@@ -119,11 +119,11 @@ function open_way_structure_landing_page_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => 3,
+          'weight' => '3',
         ),
       ),
       'entity_type' => 'field_collection_item',
@@ -142,7 +142,7 @@ function open_way_structure_landing_page_field_default_fields() {
           'url_cutoff' => '80',
         ),
         'enable_tokens' => 1,
-        'title' => 'optional',
+        'title' => 'required',
         'title_maxlength' => '128',
         'title_value' => '',
         'url' => 0,
@@ -189,14 +189,14 @@ function open_way_structure_landing_page_field_default_fields() {
       'bundle' => 'field_ow_landing_highlights',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'This text should be short but highlight the some important points about a particular feature of your product or service or action.',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 2,
+          'weight' => '2',
         ),
       ),
       'entity_type' => 'field_collection_item',
@@ -204,14 +204,14 @@ function open_way_structure_landing_page_field_default_fields() {
       'label' => 'Highlight Text',
       'required' => 0,
       'settings' => array(
-        'text_processing' => '1',
+        'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'rows' => '5',
+          'rows' => '3',
         ),
         'type' => 'text_textarea',
         'weight' => '32',
@@ -294,66 +294,6 @@ function open_way_structure_landing_page_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ow_landing_page-field_ow_landing_highlights'
-  $fields['node-ow_landing_page-field_ow_landing_highlights'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_ow_landing_highlights',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'module' => 'field_collection',
-      'settings' => array(
-        'path' => '',
-      ),
-      'translatable' => '0',
-      'type' => 'field_collection',
-    ),
-    'field_instance' => array(
-      'bundle' => 'ow_landing_page',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'field_collection',
-          'settings' => array(
-            'add' => 'Add',
-            'delete' => 'Delete',
-            'description' => 1,
-            'edit' => 'Edit',
-            'view_mode' => 'full',
-          ),
-          'type' => 'field_collection_view',
-          'weight' => '4',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_ow_landing_highlights',
-      'label' => 'Highlights',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'field_collection',
-        'settings' => array(),
-        'type' => 'field_collection_embed',
-        'weight' => '5',
-      ),
-    ),
-  );
-
   // Exported field: 'node-ow_landing_page-field_ow_landing_action'
   $fields['node-ow_landing_page-field_ow_landing_action'] = array(
     'field_config' => array(
@@ -390,7 +330,7 @@ function open_way_structure_landing_page_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
@@ -431,6 +371,62 @@ function open_way_structure_landing_page_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
+        'weight' => '4',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-ow_landing_page-field_ow_landing_highlights'
+  $fields['node-ow_landing_page-field_ow_landing_highlights'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '3',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_ow_landing_highlights',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'module' => 'field_collection',
+      'settings' => array(
+        'path' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'field_collection',
+    ),
+    'field_instance' => array(
+      'bundle' => 'ow_landing_page',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'field_collection',
+          'settings' => array(
+            'view_mode' => 'full',
+          ),
+          'type' => 'field_collection_fields',
+          'weight' => '4',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_ow_landing_highlights',
+      'label' => 'Highlights',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'field_collection',
+        'settings' => array(),
+        'type' => 'field_collection_embed',
         'weight' => '3',
       ),
     ),
@@ -471,11 +467,11 @@ function open_way_structure_landing_page_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'ow_medium-rectangle-rounded',
+            'image_style' => 'ow_large-rectangle-landing-page',
           ),
           'type' => 'image',
           'weight' => '0',
@@ -504,23 +500,13 @@ function open_way_structure_landing_page_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'media',
+        'module' => 'image',
         'settings' => array(
-          'allowed_schemes' => array(
-            'public' => 'public',
-            'vimeo' => 'vimeo',
-            'youtube' => 'youtube',
-          ),
-          'allowed_types' => array(
-            'audio' => 0,
-            'default' => 0,
-            'image' => 'image',
-            'video' => 'video',
-          ),
+          'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
         ),
-        'type' => 'media_generic',
-        'weight' => '1',
+        'type' => 'image_image',
+        'weight' => '2',
       ),
     ),
   );
@@ -553,12 +539,17 @@ function open_way_structure_landing_page_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'ow_landing_page',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'value' => '<h3>Optional Sub Title</h3><p>This text should describle in brief detail the most important part of the product or action or service that you want the user to know.&nbsp;</p><ul><li>Bullet points</li><li>Are easy to read&nbsp;</li><li>A a great way to communicate</li></ul><p>Done right these pages can be very effective. Give it a try!</p>',
+          'format' => 'filtered_html',
+        ),
+      ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
@@ -576,7 +567,7 @@ function open_way_structure_landing_page_field_default_fields() {
       'label' => 'Case Statement',
       'required' => 0,
       'settings' => array(
-        'text_processing' => '0',
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -586,7 +577,7 @@ function open_way_structure_landing_page_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '2',
+        'weight' => '3',
       ),
     ),
   );
@@ -601,6 +592,7 @@ function open_way_structure_landing_page_field_default_fields() {
   t('Highlight Text');
   t('Highlights');
   t('Media');
+  t('This text should be short but highlight the some important points about a particular feature of your product or service or action.');
 
   return $fields;
 }
